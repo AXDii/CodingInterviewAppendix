@@ -7,7 +7,7 @@
  * 输出描述：如果是合法的数值表达则返回该数字，否则返回0
  * 
  * 
- * 解题思路
+ * 解题思路：普通的乘法就行了，网上优秀方法：使用位运算加快乘法运算
  * 
  * */
 
@@ -19,15 +19,27 @@ class Solution {
 public:
     int StrToInt(string str) {
         int length = str.size();
-        int ans = 0;
         int sum = 0;
+        int sign = 0;
         for(int i = 0; i < length; i++) {
+            if(i == 0 && str[i] == '-') {
+                sign = 1;
+                continue;
+            } else if(i == 0 && str[i] == '+') {
+                continue;
+            }
+
             if(str[i] < '0' || str[i] > '9') {
                 return 0;
             }
+            int num = str[i] - 48;
+            sum = sum * 10 + num;
 
         }
-        return 0;
+        if(sign) {
+            sum = -sum;
+        }
+        return sum;
     }
 };
 
