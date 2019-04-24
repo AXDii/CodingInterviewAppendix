@@ -31,3 +31,7 @@
 *.out
 *.app
 .vscode
+
+# person
+./----解题模板---.cpp
+./test.cpp
