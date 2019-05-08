@@ -7,7 +7,7 @@
  * */
 
 #include <iostream>
-// #include <vector>
+#include <vector>
 // #include<algorithm>
 // #include<string>
 // #include <stack>
@@ -16,6 +16,16 @@
 // #include <stdlib.h>
 using namespace std;
 void stop();
+
+class Solution {
+public:
+    int maxProduct(vector<int>& nums) {
+        int size = nums.size();
+        // int num[size][2];
+        return 0;
+    }
+};
+
 
 int main()
 {
